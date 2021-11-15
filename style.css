@@ -103,6 +103,7 @@ p{
 }
 
 #botao-reiniciar:hover{
+    cursor: pointer;
     background-color: rgb(11, 194, 11);
 }
 
