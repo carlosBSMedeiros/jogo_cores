@@ -4,7 +4,8 @@ var cores = coresStr.split(',')
 var coresAleatorioas = []
 var corEnigma = '';
 var vidas = 2;
-var s = false;
+var flagFimDeJogo = false;
+var flagGanhou = false;
 carregarJogo();
 
 function gerarInteiroAleatorio(max) {
@@ -48,6 +49,7 @@ function inserirCoresNaTela(vetorCores) {
         var itemLista = document.createElement('li')
         itemLista.textContent = cor
         itemLista.className = 'item-lista'
+        itemLista.style.background = cor
         listaCores.append(itemLista)
     }
 
@@ -80,8 +82,9 @@ function carregarJogo() {
     coresAleatorioas = selecionarCoresAleatorias(cores, 10);
     corEnigma = selecionarItemAleatorioNoVetor(coresAleatorioas);
     console.log(`A cor enigma é ${corEnigma}`)
-    vidas = 2
+    vidas = 2;
     flagFimDeJogo = false;
+    flagGanhou = false;
     pintarBackground('white')
     inserirCoresNaTela(coresAleatorioas);
     carregarVidas();
@@ -137,6 +140,7 @@ function ganhouJogo(){
     reproduzirMp3('./public/resposta_certa.mp3')
     mensagemConsoleJogo(`Você acertou! a cor secreta é ${corEnigma}. Reinicie o jogo para continuar se divertindo`)
     flagFimDeJogo = true
+    flagGanhou = true
     pintarBackground(corEnigma)
 }
 
@@ -168,7 +172,9 @@ function dicaCorEnigma(){
 }
 
 function fimDeJogo() {
-    mensagemConsoleJogo(`Você perdeu! a cor enigma era ${corEnigma}. Reinicie o jogo e tente denovo`)
+    if(!flagGanhou){
+        mensagemConsoleJogo(`Você perdeu! a cor enigma era ${corEnigma}. Reinicie o jogo e tente denovo`)
+    }
 }
 
 function mensagemConsoleJogo(msg) {

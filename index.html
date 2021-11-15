@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Adivinhe a cor</title>
 </head>
 
@@ -17,6 +20,7 @@
             <p>Estou pensando em uma dessas dez cores abaixo. Você sabe qual é?</p>
             <ul class="lista-cores">
             </ul>
+            <p>Clique em uma das cores da lista e tente acertar a cor secreta!</p>
         </div>
         <div class="cor-vidas-jogo">
             <div class="header-vidas">
@@ -28,12 +32,12 @@
             </div>
         </div>
         <div class="footer-jogo">
-            <button onclick="recarregarJogo()">Reiniciar</button>
-            <textarea class="console-jogo" disabled  placeholder="clique em uma das cores da lista...">
+            <button id="botao-reiniciar" onclick="recarregarJogo()">Reiniciar</button>
+            <textarea class="console-jogo" disabled placeholder="clique em uma das cores da lista...">
             </textarea>
         </div>
 
-        
+
     </main>
     <script src="index.js"></script>
 </body>
