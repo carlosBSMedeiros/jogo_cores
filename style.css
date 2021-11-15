@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    background-color: #FFFFFF;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+}
+
+main{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 25px;
+    border: 1px solid ;
+    padding:  1rem 2rem;
+    background-color: white;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+.form-jogo{
+    width: 25vw;
+}
+
+.cor-vidas-jogo{
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-jogo{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.console-jogo{
+    border-radius: 5px;
+    border: solid 1px black;
+    resize: none;
+    height: 3rem;
+    width: 60%;
+    box-sizing: border-box;
+    padding: 8px 2rem 0 2rem;
+}
+
+.header-vidas{
+    display: flex;
+    flex-direction: row;
+}
+
+.coracao-jogo{
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+.coracao-jogo img{
+    margin: 0 0.1rem
+}
+
+.painel-cores{
+    min-height: 60%;
+    min-width: 60%;
+}
+
+.item-lista{
+    color:black;
+}
+
+
